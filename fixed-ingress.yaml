@@ -4,20 +4,20 @@ metadata:
   name: app-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
-  ingressClassName: nginx
   rules:
     - host: 80.211.122.147.nip.io
       http:
         paths:
-          - path: /
+          - path: /(.*)
             pathType: Prefix
             backend:
               service:
                 name: frontend-service
                 port:
                   number: 80
-          - path: /tasks
+          - path: /api(/|$)(.*)
             pathType: Prefix
             backend:
               service:
