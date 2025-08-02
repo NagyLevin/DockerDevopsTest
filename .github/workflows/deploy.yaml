@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  DOCKER_USER: my-dockerhub-user
+  DOCKER_USER: nagylevin
 
 jobs:
   build-and-deploy:
