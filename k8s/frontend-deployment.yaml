@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -13,7 +13,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
-        image: nagylevin/frontend:latest
-        ports:
-        - containerPort: 80
+        - name: frontend
+          image: docker.io/YOUR_DOCKER_USER/frontend:latest
+          ports:
+            - containerPort: 80
