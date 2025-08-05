@@ -20,4 +20,4 @@ spec:
             - containerPort: 3000
           env:
             - name: MONGO_URI
-              value: "mongodb://mongo:27017/taskdb"
+              value: "mongodb://db-service:27017/tasks"

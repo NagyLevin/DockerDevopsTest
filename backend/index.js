@@ -3,11 +3,17 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+// Get MongoDB URI from environment variable or fallback
+const mongoUri = process.env.MONGO_URI || 'mongodb://db-service:27017/taskdb';
+
 // Connect to MongoDB
-mongoose.connect('mongodb://db:27017/taskdb', {
+mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
+  .then(() => {
+    console.log(`Connected to MongoDB at ${mongoUri}`);
+  })
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
   });
