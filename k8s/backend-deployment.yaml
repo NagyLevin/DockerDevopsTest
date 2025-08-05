@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: backend
-          image: docker.io/YOUR_DOCKER_USER/backend:latest
+          image: docker.io/<DockerHubUser>/backend:latest
+
           ports:
             - containerPort: 3000
           env:
