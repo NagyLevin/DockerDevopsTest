@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: docker.io/<a_DockerHub_felhasználóneved>/backend:latest
+          image: docker.io/nagylevin/backend:latest
 
           ports:
             - containerPort: 3000

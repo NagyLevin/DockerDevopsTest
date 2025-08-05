@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: docker.io/<a_DockerHub_felhasználóneved>/frontend:latest
+          image: docker.io/nagylevin/frontend:latest
           ports:
             - containerPort: 80
